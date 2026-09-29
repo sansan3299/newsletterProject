@@ -27,7 +27,7 @@ app.post(`/`, async (req, res) => {
 
   const jsonData = JSON.stringify(data);
 
-  const url = `https://us9.api.mailchimp.com/3.0/lists/1332114888`;
+  const url = `https://us9.api.mailchimp.com/3.0/lists/${process.env.MC_LIST_ID}`;
   try {
     const response = await fetch(url, {
       method: "POST",
